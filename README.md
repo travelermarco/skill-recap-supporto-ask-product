@@ -31,7 +31,7 @@ At startup the skill asks:
 > Per quale prodotto devo generare il report?
 > 1. Smartpricing — prezzi, calendario, strategie di revenue
 > 2. Smartchat — AI messaging, WhatsApp, conversazioni guest
-> 3. Smartconnect — sincronizzazione channel manager
+> 3. Smartconnect — marketing, newsletter, shop, campagne
 > 4. SmartPMS — gestione prenotazioni, CiaoBooking, PMS
 
 The product is locked for the entire session — not re-asked.
@@ -44,7 +44,7 @@ The product is locked for the entire session — not re-asked.
 |---------|----------|--------------|
 | Smartpricing | `PRD` | `PRD-\d+` |
 | Smartchat | `SMARTCHAT` | `SMARTCHAT-\d+` |
-| Smartconnect | `PAY` | `PAY-\d+` |
+| Smartconnect (marketing) | `PAY` | `PAY-\d+` |
 | SmartPMS | `CIAOB` | `CIAOB-\d+` |
 
 ### Ticket filtering — include keywords
@@ -53,7 +53,7 @@ The product is locked for the entire session — not re-asked.
 |---------|-----------------------------------------------|
 | Smartpricing | smartpricing, prezzo/prezzi, calendario prezzi, strategia, revenue, tariffa, occupancy, minimum stay, prezzo minimo, raccomandazione prezzo |
 | Smartchat | smartchat, AI risposta, messaggi non, conversazione, whatsapp (in Smartchat context), knowledge base, KB, risposta automatica, bot |
-| Smartconnect | smartconnect, channel manager, sincronizzazione, sync, connettore, OTA, disponibilità, aggiornamento disponibilità, mismatch prenotazioni, doppia prenotazione (channel context) |
+| Smartconnect | smartconnect, newsletter, shop, campagna/campagne, email marketing, invio email, template, comunicazione, promozione, lista contatti, iscritti, marketing |
 | SmartPMS | smartpms, ciaobooking, pms, prenotazioni, overbooking, alloggiati web, ROSS1000, check-in online, fatturazione, extra, folio, city tax, tourist tax |
 
 Tickets that belong exclusively to a different product are always excluded.
@@ -68,7 +68,7 @@ Tickets are grouped into product-specific thematic clusters. Each cluster shows 
 
 **Smartchat clusters:** Messaggi non recapitati (Booking.com / Airbnb) · AI risponde con info sbagliate / confonde proprietà · Piattaforma lenta / non accessibile / down · Chat non associata a proprietà o prenotazione · Invio file/video WhatsApp non funzionante · Accesso account / credenziali · Gestione KB / proprietà in Smartchat · Anomalie AI varie (numeri telefono, checkout, indirizzi) · Feature Request
 
-**Smartconnect clusters:** Disponibilità non sincronizzata su OTA · Doppia prenotazione / overbooking da mancata sync · Prezzi non aggiornati su channel · Errori connessione / timeout API channel manager · Nuova connessione OTA / setup · Accesso account / credenziali · Feature Request · Altro
+**Smartconnect clusters:** Newsletter non inviata / problemi di delivery · Template email — errori di personalizzazione o visualizzazione · Shop / prodotti — anomalie o mancata sincronizzazione · Campagne marketing — configurazione o invio fallito · Liste contatti / iscritti — gestione e sincronizzazione · Accesso account / credenziali · Feature Request · Altro
 
 **SmartPMS clusters:** Prenotazioni non sincronizzate / mancanti · Overbooking / conflitti prenotazione · Check-in online non funzionante · Alloggiati Web / ROSS1000 — invio non riuscito · City tax / extra / folio — anomalie · Fatturazione / emissione documenti · Accesso account / credenziali · Feature Request · Altro
 

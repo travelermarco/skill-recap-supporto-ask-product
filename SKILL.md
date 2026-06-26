@@ -29,7 +29,7 @@ Appena l'utente fornisce i file HTML Zendesk, **prima di parsare qualsiasi ticke
 > Per quale prodotto devo generare il report?
 > 1. **Smartpricing** — prezzi, calendario, strategie di revenue
 > 2. **Smartchat** — AI messaging, WhatsApp, conversazioni guest
-> 3. **Smartconnect** — sincronizzazione channel manager
+> 3. **Smartconnect** — marketing, newsletter, shop, campagne
 > 4. **SmartPMS** — gestione prenotazioni, CiaoBooking, PMS
 >
 > Rispondi con il numero o il nome del prodotto.
@@ -85,12 +85,12 @@ Applicare il filtro corrispondente al prodotto selezionato nello step 0.
 
 #### SMARTCONNECT
 **Includere** ticket che nel titolo o nei primi 800 chars contengono:
-- "smartconnect", "smart connect", "channel manager", "sincronizzazione", "sync", "connettore", "OTA", "disponibilità", "disponibilita", "aggiornamento disponibilità", "mismatch prenotazioni", "doppia prenotazione" in contesto channel manager
+- "smartconnect", "smart connect", "newsletter", "shop", "campagna", "campagne", "email marketing", "invio email", "template", "comunicazione", "promozione", "lista contatti", "iscritti", "marketing"
 
 **Escludere** ticket che riguardano esclusivamente:
 - Smartchat / AI messaggi
 - Smartpricing (prezzi, calendario)
-- SmartPMS (gestione PMS, fatturazione)
+- SmartPMS (gestione PMS, fatturazione, prenotazioni)
 
 #### SMARTPMS
 **Includere** ticket che nel titolo o nei primi 800 chars contengono:
@@ -126,11 +126,11 @@ Raggruppare i ticket in cluster tematici in base al prodotto selezionato.
 - Feature Request
 
 #### Cluster SMARTCONNECT
-- Disponibilità non sincronizzata su OTA
-- Doppia prenotazione / overbooking da mancata sync
-- Prezzi non aggiornati su channel
-- Errori connessione / timeout API channel manager
-- Nuova connessione OTA / setup
+- Newsletter non inviata / problemi di delivery
+- Template email — errori di personalizzazione o visualizzazione
+- Shop / prodotti — anomalie o mancata sincronizzazione
+- Campagne marketing — configurazione o invio fallito
+- Liste contatti / iscritti — gestione e sincronizzazione
 - Accesso account / credenziali
 - Feature Request
 - Altro
