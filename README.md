@@ -23,12 +23,12 @@ Output: `/mnt/user-data/outputs/CustomerName_{Product}_Report_CSM.pptx`
 
 ## Supported products
 
-| Product | Filter keywords | Jira patterns |
-|---------|----------------|---------------|
-| Smartpricing | prezzi, calendario, strategia, revenue, tariffa, occupancy | `SMARTPRI-\d+`, `SP-\d+` |
-| Smartchat | smartchat, AI risposta, messaggi non, conversazione, whatsapp | `SMARTCHAT-\d+`, `CIAOB-\d+` |
-| Smartconnect | channel manager, sincronizzazione, sync, OTA, disponibilità | `SMARTCON-\d+`, `CONNECT-\d+` |
-| SmartPMS | smartpms, ciaobooking, prenotazioni, overbooking, alloggiati web | `SMARTPMS-\d+`, `PMS-\d+` |
+| Product | Filter keywords | Jira key | Jira pattern |
+|---------|----------------|----------|--------------|
+| Smartpricing | prezzi, calendario, strategia, revenue, tariffa, occupancy | `PRD` | `PRD-\d+` |
+| Smartchat | smartchat, AI risposta, messaggi non, conversazione, whatsapp | `SMARTCHAT` | `SMARTCHAT-\d+` |
+| Smartconnect | channel manager, sincronizzazione, sync, OTA, disponibilità | `PAY` | `PAY-\d+` |
+| SmartPMS | smartpms, ciaobooking, prenotazioni, overbooking, alloggiati web | `CIAOB` | `CIAOB-\d+` |
 
 ---
 

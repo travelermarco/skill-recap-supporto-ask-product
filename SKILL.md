@@ -149,14 +149,14 @@ Raggruppare i ticket in cluster tematici in base al prodotto selezionato.
 Per ogni cluster: conteggio ticket, lista ticket chiave, status (RISOLTO / APERTO / PARZIALE).
 
 ### 2.4 Pattern Jira per prodotto
-Cercare nel testo del ticket i seguenti pattern:
+Cercare nel testo del ticket i seguenti pattern (chiavi reali da Jira Smartness):
 
-| Prodotto | Pattern Jira |
-|----------|-------------|
-| Smartpricing | `SMARTPRI-\d+`, `SP-\d+`, `PRICING-\d+` |
-| Smartchat | `SMARTCHAT-\d+`, `CIAOB-\d+`, `SC-\d+` |
-| Smartconnect | `SMARTCON-\d+`, `CONNECT-\d+` |
-| SmartPMS | `SMARTPMS-\d+`, `PMS-\d+`, `CIAOB-\d+` |
+| Prodotto | Chiave Jira | Pattern regex |
+|----------|-------------|---------------|
+| Smartpricing | `PRD` | `PRD-\d+` |
+| Smartchat | `SMARTCHAT` | `SMARTCHAT-\d+` |
+| Smartconnect | `PAY` | `PAY-\d+` |
+| SmartPMS | `CIAOB` | `CIAOB-\d+` |
 
 ---
 
