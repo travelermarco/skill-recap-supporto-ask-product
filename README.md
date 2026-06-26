@@ -32,6 +32,26 @@ Output: `/mnt/user-data/outputs/CustomerName_{Product}_Report_CSM.pptx`
 
 ---
 
+## Open issues analysis
+
+A core feature of this skill is the **analysis of pending actions on open tickets**. For every ticket that is still open (or recently closed but relevant), the skill reads the last two comments to classify its status:
+
+| Status | Meaning | Badge colour |
+|--------|---------|--------------|
+| `cliente` | Customer must reply to an agent — agent is waiting for data, screenshot, or video | Blue — "Awaiting reply: [agent name]" |
+| `support` | Support or Tech must communicate the outcome to the customer, or Tech must confirm to Support | Amber — "Support/Tech must [action]" |
+| `silente` | Customer has not replied after the agent's request — ticket stalled | Grey — "Silent ticket — customer has not responded" |
+| `chiuso_visibilità` | Formally closed but included for visibility (recent or significant issue) | Grey ✓ — "Closed — included for visibility" |
+
+For each open issue the skill also:
+- Identifies the **agent in charge** by reading the last support comment in the thread (never assumed from chat context)
+- Extracts any **linked Jira reference** using the product-specific key (e.g. `PRD-123`, `SMARTCHAT-456`)
+- Describes the **full resolution path** when multiple steps are required — e.g. *"Jira resolved by Tech → Tech must confirm to [agent] → [agent] communicates outcome to customer"*
+
+All open issues are surfaced on **slide 7** of the deck, each with ticket number, severity badge, title, agent in charge, description, and a colour-coded action badge.
+
+---
+
 ## Triggers
 
 Use this skill when the user:
